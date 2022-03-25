@@ -26,7 +26,17 @@ type ResponseOrder struct {
 	CustomerName string        `json:"customer_name"`
 	Items        ResponseItems `json:"items"`
 }
+// @BasePath /order
 
+// PingExample godoc
+// @Summary ping example
+// @Schemes
+// @Description get all order
+// @Tags example
+// @Accept json
+// @Produce json
+// @Success 200 {string} GetAllOrder()
+// @Router /order [get]
 func(db OrderHandler) GetAllOrder(c *gin.Context) {
   var (
     result gin.H
