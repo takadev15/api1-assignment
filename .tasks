@@ -1,0 +1,13 @@
+# vim: set fenc=utf-8 ft=dosini:
+# see: https://github.com/skywind3000/asynctasks.vim/wiki/Task-Config
+
+[project-build]
+command=go build
+cwd=<root>
+output=quickfix
+[project_run]
+command=go run cmd/main.go
+cwd=<root>
+output=terminal
+
+

@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  # DB
+  db:
+    container_name: assignment2_db
+    image: "postgres:latest"
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - ./data/pgdata:/var/lib/postgresql/data
+    env_file:
+      - .env
+
+  # App
+
+  # Admin
